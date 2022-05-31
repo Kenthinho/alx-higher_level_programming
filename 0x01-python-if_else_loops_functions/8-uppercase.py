@@ -6,4 +6,4 @@ def uppercase(str):
         if ord('a') <= c <= ord('z'):
             c -= 32
         letter += chr(c)
-    print(f"{letter}")
+    print("{}".format(letter))
