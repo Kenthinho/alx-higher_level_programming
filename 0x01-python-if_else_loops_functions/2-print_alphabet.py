@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for chr in "abcdefghijklmnopqrstuvwxyz":
-    print(chr, end="")
+    print('{}'.format(chr), end="")
