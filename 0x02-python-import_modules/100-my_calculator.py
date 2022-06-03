@@ -1,25 +1,20 @@
 #!/usr/bin/python3
-import sys
-from calculator_1 import add, mul, sub, div
-if __name__ == "__main__":
-    args = sys.argv
-    if len(args) != 4:
-        print("Usage: ./100-my_calculator.py <a> <opearator> <b>")
+
+if __name__ == '__main__':
+
+    import sys
+    from calculator_1 import add, sub, mul, div
+    if len(sys.argv) == 4:
+        functions = [('+', add), ('-', sub), ('*', mul), ('/', div)]
+        for func in functions:
+            if sys.argv[2] == func[0]:
+                a = int(sys.argv[1])
+                b = int(sys.argv[3])
+                print('{:d} {:s} {:d} = {:d}'.format(
+                    a, func[0], b, func[1](a, b)))
+                sys.exit()
+        print('Unknown operator. Available operators: +, -, * and /')
         sys.exit(1)
     else:
-        if args[2] != '*' and args[2] != '+' amd args[2] != '-' and args[2] != '/'):
-            print("Unknown operator. Available operators: +, -, * and /")
-            sys.exit(1)
-        else:
-            a = int(args[1])
-            b = int(args[3])
-            mth = 0
-            if args[2] == '+':
-                mth = add(a, b)
-            elif args[2] == '-':
-                mth = sub(a, b)
-            elif args[2] == '*':
-                mth = mul(a, b)
-            else:
-                mth = div(a, b)
-            print("{} {} {} = {}".format(a, args[2], b, mth))
+        print('Usage: {:s} <a> <operator> <b>'.format(sys.argv[0]))
+        sys.exit(1)
