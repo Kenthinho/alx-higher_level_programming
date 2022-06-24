@@ -3,6 +3,7 @@
 returns the sum of a and b
 """
 
+
 def add_integer(a, b=98):
     '''Adds two integers or floats value together
     Args:
