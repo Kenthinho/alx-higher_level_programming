@@ -14,7 +14,7 @@
 # Invalid arguments
 >>> try:
 ...	add_integer('3', 3)
-...except TypeError as ex:
+... except TypeError as ex:
 ...	print(ex.args[0])
 a must be an integer
 >>> try:
