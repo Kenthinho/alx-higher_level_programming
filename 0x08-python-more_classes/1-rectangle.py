@@ -1,0 +1,61 @@
+#!/usr/bin/python3
+'''A module made for working with a rectangle
+'''
+
+
+class Rectangle:
+    """Represents a 2D Polygon with 4 perpendicular sides
+    """
+    def __init__(self, width=0, height=0):
+        '''Initializes each instance with its parameters
+
+        Args:
+            width - (int) represents the width of the rectangle
+            height - (int) represents the height of the rectangle
+        '''
+        self.width = width
+        self.height = height
+
+    @property
+    def width(self):
+        '''Retrieves the value of the width
+
+        Returns: an int value
+        '''
+        return self.__width
+
+    @property
+    def height(self):
+        '''Retrieves the value of the height
+
+        Returns: an int value
+        '''
+        return self.__height
+
+    @width.setter
+    def width(self, value):
+        '''modifies the value of the width
+
+        Args (int):
+            value - argument
+        '''
+        if not isinstance(value, int):
+            raise TupeError("width must be an integer")
+        elif value < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = value
+
+    @height.setter
+    def height(self, value):
+        '''modifies the value of the height
+
+        Args (int):
+            value - argument supplied
+        '''
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        elif value < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = value
