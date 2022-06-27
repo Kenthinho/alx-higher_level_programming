@@ -86,6 +86,6 @@ class Rectangle:
                 range(self.height)))
             return ''.join(result)
 
-    def __repr__self(self):
+    def __repr__(self):
         '''Returns a representation of this Rectangle's initialization.'''
         return 'Rectangle({:d}, {:d})'.format(self.width, self.height)
