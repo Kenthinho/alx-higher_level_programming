@@ -89,7 +89,7 @@ class Rectangle:
             width = self.width
             height = self.height
             result = map(lambda x: (symbol * width) + ('\n' * (x != height - 1)), range(height))
-            return ''.join(list(res))
+            return ''.join(list(result))
 
     def __repr__(self):
         '''Returns a representation of this Rectangle's initialization.'''
