@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 '''A module made for working with a rectangle
 '''
-number_of_instances = 0
 
 
 class Rectangle:
     """Represents a 2D Polygon with 4 perpendicular sides
     """
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         '''Initializes each instance with its parameters
 
