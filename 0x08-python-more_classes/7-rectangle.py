@@ -88,7 +88,8 @@ class Rectangle:
             symbol = str(self.print_symbol)
             width = self.width
             height = self.height
-            result = map(lambda x: (symbol * width) + ('\n' * (x != height - 1)), range(height))
+            result = map(lambda x: (symbol * width) +
+                         ('\n' * (x != height - 1)), range(height))
             return ''.join(list(result))
 
     def __repr__(self):
