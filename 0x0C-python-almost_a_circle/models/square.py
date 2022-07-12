@@ -13,7 +13,7 @@ class Square(Rectangle):
         """Initializes a new square object.
         Args:
             size (int): The width and height of this square.
-            x (int): The horizontal position of this square
+            x (int): The horizontal position of this square.
             y (int): The vertical position of this square.
             id (int): The id of this square.
         """
@@ -35,24 +35,24 @@ class Square(Rectangle):
     def __str__(self):
         """Creates a string representation of this polygon.
         Returns:
-            str: A string representation of this polygon
+            str: A string representation of this polygon.
         """
         parts = (
-                self.id,
-                self.x,
-                self.y,
-                self.width
+            self.id,
+            self.x,
+            self.y,
+            self.width
         )
         res = '[Square] ({}) {:d}/{:d} - {:d}'.format(
-                parts[0], parts[1], parts[2], parts[3]
+            parts[0], parts[1], parts[2], parts[3]
         )
         return res
 
     def update(self, *args, **kwargs):
         """Updates the attributes of this polygon.
         Args:
-            args (tuple): A tuple of non-keyword arguments
-            kwargs (dict): A dictionary of keyword arguments
+            args (tuple): A tuple of non-keyword arguments.
+            kwargs (dict): A dictionary of keyword arguments.
         """
         attrs = ('id', 'size', 'x', 'y')
         for key, val in zip(attrs, args):
@@ -65,12 +65,12 @@ class Square(Rectangle):
     def to_dictionary(self):
         """Creates a dictionary representation of this polygon.
         Returns:
-            dict:A dictionary representation of this polygon.
+            dict: A dictionary representation of this polygon.
         """
         res = {
-                'id': self.id,
-                'size': self.size,
-                'x': self.x,
-                'y': self.y
+            'id': self.id,
+            'size': self.size,
+            'x': self.x,
+            'y': self.y
         }
         return res
